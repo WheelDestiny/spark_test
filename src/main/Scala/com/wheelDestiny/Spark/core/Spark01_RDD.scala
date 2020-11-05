@@ -1,7 +1,8 @@
-package com.wheelDestiny.Spark
+package com.wheelDestiny.Spark.core
 
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
+
 //创建spark上下文对象的类即为spark的Driver对象
 object Spark01_RDD {
   def main(args: Array[String]): Unit = {
