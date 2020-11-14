@@ -1,7 +1,6 @@
 package com.wheelDestiny.Spark.core
 
 import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.deploy.
 
 object Spark16_Oper15 {
 
