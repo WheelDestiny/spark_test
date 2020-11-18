@@ -19,7 +19,7 @@ object SparkSql02_Transform {
 
 
     //创建RDD
-    val rdd = spark.sparkContext.makeRDD(List((1, "zhao", 10), (2, "qian", 20), (3, "sun", 30)))
+    val rdd: RDD[(Int, String, Int)] = spark.sparkContext.makeRDD(List((1, "zhao", 10), (2, "qian", 20), (3, "sun", 30)))
 
     //转换为DF
     val df = rdd.toDF("id", "name", "age")
