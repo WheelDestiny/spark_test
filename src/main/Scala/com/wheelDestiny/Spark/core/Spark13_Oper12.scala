@@ -1,6 +1,9 @@
 package com.wheelDestiny.Spark.core
 
-import org.apache.spark.{Partitioner, SparkConf, SparkContext}
+import org.apache.spark.rdd.RDD
+import org.apache.spark.{HashPartitioner, Partitioner, SparkConf, SparkContext}
+
+import scala.reflect.ClassTag
 
 object Spark13_Oper12 {
 
@@ -16,10 +19,13 @@ object Spark13_Oper12 {
 //    重分区
 //    println(listRDD.partitionBy(new org.apache.spark.HashPartitioner(2)).collect().mkString(","))
 
-    listRDD.partitionBy(new MyPartitioner(2)).glom().collect().foreach(i =>{
-      i.foreach(print)
-      println()
-    })
+//    listRDD.partitionBy(new MyPartitioner(2)).glom().collect().foreach(i =>{
+//      i.foreach(print)
+//      println()
+//    })
+
+
+//    val value: RDD[(Int, Iterable[(Int, String)])] = listRDD.groupBy(_._1, new HashPartitioner(1))
 
   }
 
