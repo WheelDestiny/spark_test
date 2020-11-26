@@ -98,7 +98,7 @@ object HainiuKafkaTest {
     val consumer: ActorRef = driver.actorOf(Props[HainiuConsumer](new HainiuConsumer()), "consumer")
 
 
-    val topic = "wheelDestiny"
+    val topic = "wheelDestinyTopic"
     producer ! topic
 //    consumer ! topic
 
